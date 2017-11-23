@@ -17,16 +17,17 @@ class Triangle
     else
       :scalene
     end
+  end
 
     def validate_triangle
-    s = (a + b + c) / 2.0
+      s = (a + b + c) / 2.0
 
-    ok = (s - a) * (s - b) * (s - c)
+      ok = (s - a) * (s - b) * (s - c)
 
-    if a <= 0 || b <= 0 || c <= 0 || ok <= 0 then
-      raise TriangleError
+      if a <= 0 || b <= 0 || c <= 0 || ok <= 0 then
+        raise TriangleError
+      end
     end
-  end
 end
 
 class TriangleError < StandardError
