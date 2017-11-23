@@ -1,7 +1,10 @@
 class Triangle
   # write code here
-  attr_accessor :equilateral, :isosceles, :scalene
+  attr_accessor :a, :b, :c
   def initialize(a, b, c)
+    @a = a
+    @b = b
+    @a = c
   end
 
   def kind(a, b, c)
