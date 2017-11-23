@@ -3,9 +3,13 @@ class Triangle
 
   def kind(a, b, c)
 
-    # s = (a + b + c) / 2.0
-    #
-    # ok = (s - a) * (s - b) * (s - c)
+    s = (a + b + c) / 2.0
+
+    ok = (s - a) * (s - b) * (s - c)
+
+    if a <= 0 || b <= 0 || c <= 0 || ok <= 0 then
+      raise TriangleError
+    end
 
 
     if a == b && b == c then
