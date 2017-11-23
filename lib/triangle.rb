@@ -1,6 +1,8 @@
 class Triangle
   # write code here
-
+  def initialize(a, b, c)
+  end
+  
   def kind(a, b, c)
 
     s = (a + b + c) / 2.0
