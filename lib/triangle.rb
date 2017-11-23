@@ -1,8 +1,9 @@
 class Triangle
   # write code here
+  attr_accessor :equilateral, :isosceles, :scalene
   def initialize(a, b, c)
   end
-  
+
   def kind(a, b, c)
 
     s = (a + b + c) / 2.0
@@ -12,7 +13,6 @@ class Triangle
     if a <= 0 || b <= 0 || c <= 0 || ok <= 0 then
       raise TriangleError
     end
-
 
     if a == b && b == c then
       :equilateral
