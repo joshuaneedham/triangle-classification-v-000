@@ -20,13 +20,9 @@ class Triangle
   end
 
     def validate_triangle
-      s = (a + b + c) / 2.0
-
-      ok = (s - a) * (s - b) * (s - c)
-
-      if a <= 0 || b <= 0 || c <= 0 || ok <= 0 then
-        raise TriangleError
-      end
+      triangle = [(a + c > c), (a + c > b), (b + c > a)]
+      [a, b, c].each { |s| triangle << false is s <= 0 }
+      raise TriangleError if triangle.include?(false)
     end
 end
 
